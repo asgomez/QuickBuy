@@ -9,7 +9,11 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (Id == 0)
+                AdicionarCritica("Não foi identificado qual a referência do produto");
+
+            if (string.IsNullOrEmpty(Nome))
+                AdicionarCritica("Produto não informado");
         }
     }
 }
