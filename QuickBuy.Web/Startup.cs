@@ -31,7 +31,7 @@ namespace QuickBuy.Web
             services.AddDbContext<QuickBuyContexto>(option =>
                                                         option.UseLazyLoadingProxies()
                                                         .UseMySql(connectionString,
-                                                                            m => m.MigrationsAssembly("QickBuy.Repositorio")));
+                                                                            m => m.MigrationsAssembly("QuickBuy.Repositorio")));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
